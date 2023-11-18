@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация и Авторизация</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        #content-box {
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: 300px;
+        }
+
+        #registration-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Уберем рамку у полей ввода текста */
+        input {
+            border: none;
+            padding: 8px;
+            margin: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        /* Стили для кнопок */
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Стили для меток (label) */
+        label {
+            display: block;
+            margin-bottom: 1px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content-box">
+        <div id="registration-box">
+            <button>Регистрация</button>
+            <button>Авторизация</button>
+        </div>
+        
+        <label for="name">Имя:</label>
+        <div>
+            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+        </div>
+
+        <label for="surname">Фамилия:</label>    
+        <div>
+            <input type="text" id="surname" name="surname" required placeholder="Введите вашу фамилию">
+        </div>
+
+        <label for="email">Email:</label>
+        <div>
+            <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+        </div>
+
+        <label for="password">Пароль:</label>
+        <div>
+            <input type="password" id="password" name="password" required placeholder="Введите ваш пароль">
+        </div>
+
+        <div id="registration-box">
+            <button>Зарегистрироваться</button>
+        </div>
+    </div>
+
+</body>
+</html>

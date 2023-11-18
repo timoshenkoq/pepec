@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        #welcome-box {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        #greeting-box {
+            border: 1px solid #3498db;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        #name-box {
+            border: 1px solid #3498db;
+            border-radius: 8px;
+            padding: 10px;
+            background-color: #fff;
+        }
+
+        /* Уберем рамку у поля для ввода текста */
+        #name {
+            border: none;
+            padding: 8px;
+            margin: 8px;
+            width: 200px;
+            box-sizing: border-box;
+            outline: none; /* Уберем подчеркивание при фокусе */
+        }
+
+        /* Стили для кнопки */
+        input[type="submit"] {
+            padding: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 4px;
+            background-color: #3498db;
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #297fb8;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="welcome-box">
+        <div id="greeting-box">
+            <p>Как вас зовут?</p>
+        </div>
+
+        <div id="name-box">
+            <form>
+                <!-- Добавим стиль для поля ввода имени и подсказку -->
+                <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                <input type="submit" value="Отправить">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
