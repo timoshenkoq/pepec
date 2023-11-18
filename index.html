@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css"  href="style.css">
+    <script type="text/javascript" src="test.js"></script>
+    <style>
+        /* Добавленные стили */
+        .chat-list {
+            border-top: 1px solid #ffffff;
+            border-bottom: 1px solid #ffffff;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .chat-list:hover {
+            background-color: #333333;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+<header class="bg-dark text-white text-center py-3">
+    <h1>PIPEC</h1>
+    <div class="sidebar">
+        <div class="profile-block">
+            <img src="profile.jpg" alt="Профиль" id="current-profile-img">
+            <span id="current-profile-name">И.П</span>
+        </div>
+        <div class="search-bar">
+            <button class="search-button"  onclick="openSearch()"><img src="search.png" width="40px"></button>
+            <div id="searchContainer" class="search-container">
+                <input type="text" id="searchInput" placeholder="Введите запрос">
+                <button id="searchBtn" onclick="performSearch()">Поиск</button>
+            </div>
+        </div>
+
+        <!-- Добавлен новый блок для  чатов -->
+        <div class="chat-list" onclick="showChatList()">
+            <h2>Чат1</h2>
+        </div>
+
+        <!-- Добавлен второй блок для второго чата -->
+        <div class="chat-list" onclick="showChatList()">
+            <h2>Чат2</h2>
+        </div>
+
+        <div class="create-chat-button" onclick="createChat()">
+            <img src="plus.png" alt="Плюс">
+        </div>
+    </div>
+</header>
+
+<main class="flex-grow-1 d-flex flex-row">
+    <div class="chat-container">
+        <div class="chat" id="chat-box">
+            <div class="chat-header">
+                <div class="chat-partner-profile">
+                    <span>Изначальный чат</span>
+                </div>
+                <!-- Добавьте кнопку для возврата к списку чатов, если нужно -->
+            </div>
+            <!-- Здесь будет размещена история диалогов -->
+            <p>Привет! Как дела?</p>
+            <p>Прекрасно, спасибо! А у тебя?</p>
+            <!-- и так далее -->
+        </div>
+
+        <!-- Форма для ввода сообщения -->
+        <form id="message-form">
+            <input type="text" id="message-input" class="message-input" placeholder="Введите ваше сообщение" onkeydown="if(event.keyCode == 13) sendMessage()">
+            <button type="button" onclick="attachFile()" class="attachment-button">Прикрепить</button>
+            <button type="button" onclick="sendMessage()" class="send-button">Отправить</button>
+        </form>
+    </div>
+</main>
+
+<footer class="fixed-bottom bg-dark text-white text-center py-2">
+    <!-- Дополнительные элементы в подвале, если необходимо -->
+</footer>
+
+<script>
+    function showChatList() {
+        // Здесь можно добавить код для отображения списка чатов
+        alert('Отображение списка чатов');
+    }
+</script>
+
+</body>
+</html>
